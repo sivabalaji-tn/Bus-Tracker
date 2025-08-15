@@ -112,7 +112,7 @@
       toast.classList.add('show');
       setTimeout(() => {
         hideToast(id);
-      }, 10000); // auto hide in 10 sec
+      }, 10000);
     }, delay);
   }
   function hideToast(id) {
