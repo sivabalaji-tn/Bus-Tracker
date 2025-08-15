@@ -12,7 +12,6 @@
   <link href="admin-styles/admin.css" rel="stylesheet">
 
   <style>
-    /* Notification styles */
     .custom-toast {
       position: fixed;
       right: 20px;
@@ -55,8 +54,6 @@
   </style>
 </head>
 <body class="admin-login-bg">
-
-<!-- Guest Admin Notification -->
 <div id="guestToast" class="custom-toast">
   <div class="d-flex justify-content-between align-items-start">
     <div>
@@ -68,7 +65,6 @@
   </div>
 </div>
 
-<!-- Guest Driver Notification -->
 <div id="driverToast" class="custom-toast">
   <div class="d-flex justify-content-between align-items-start">
     <div>
