@@ -1,0 +1,96 @@
+/* Background */
+body.admin-login-bg {
+  background: linear-gradient(120deg, #eaffea, #fffdd0);
+}
+
+/* Card Styling */
+.card {
+  border-radius: 1.5rem;
+  border: 2px solid #28a74522;
+  background-color: #ffffffee;
+}
+
+/* Form Elements */
+input:focus, select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+/*----------------------------------------------------------------------------------------------*/
+                                  /*Admin Create*/
+/* Background for admin pages */
+body.admin-login-bg {
+  background: linear-gradient(120deg, #eaffea, #fffdd0); /* light green to light yellow */
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Card styling */
+.card {
+  border-radius: 1.5rem;
+  border: 2px solid #28a74522; /* light green border */
+  background-color: #ffffffdd; /* slight transparency for modern look */
+}
+
+/* Inputs focus style */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.3); /* green focus ring */
+  border-color: #28a745;
+  outline: none;
+}
+
+/* Button styling */
+.btn-warning {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+
+/* Input group icon styling */
+.input-group-text {
+  font-size: 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+}
+
+/* Headings and center content */
+h4, .card-title {
+  font-weight: 700;
+}
+
+.alert {
+  border-radius: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 2rem 1rem;
+  }
+}
+
+/*----------------------------------DRIVER DASHBOARD------------------------------------------------------------*/
+.modal-content {
+  background-color: #f9fff9;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  border-radius: 16px;
+}
+/*=================================================================================================*/

@@ -1,0 +1,63 @@
+<?php
+session_start();
+if (isset($_SESSION['admin_logged_in'])) {
+  header("Location: driver-dashboard.php");
+  exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Driver Login - Bus Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="admin-styles/admin.css" rel="stylesheet">
+</head>
+<body class="admin-login-bg">
+
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%;">
+      <div class="text-center mb-4">
+        <i class="bi bi-steering-wheel text-success display-4"></i>
+        <h3 class="text-success mt-2">Driver Login</h3>
+        <p class="text-muted">Bus Driver Access Panel</p>
+      </div>
+
+      <?php if (isset($_GET['error'])): ?>
+        <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center" role="alert">
+          <i class="bi bi-exclamation-triangle-fill me-2"></i>
+          <?= htmlspecialchars($_GET['error']) ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      <?php endif; ?>
+
+      <form method="POST" action="driver-login-check.php">
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <div class="input-group">
+            <span class="input-group-text bg-success text-white"><i class="bi bi-envelope-fill"></i></span>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <div class="input-group">
+            <span class="input-group-text bg-success text-white"><i class="bi bi-lock-fill"></i></span>
+            <input type="password" name="password" class="form-control" required>
+          </div>
+        </div>
+
+        <button class="btn btn-warning w-100">
+          <i class="bi bi-box-arrow-in-right"></i> Login
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
